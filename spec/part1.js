@@ -33,7 +33,8 @@
     describe('first', function() {
 
       it('should be able to pull out the first element of an array', function() {
-        expect(_.first([1, 2, 3])).to.equal(FILL_ME_IN);
+        //expect(_.first([1, 2, 3])).to.equal(FILL_ME_IN);
+        expect(_.first([1, 2, 3])).to.equal(1);
       });
 
       it('should accept an index argument', function() {
@@ -43,7 +44,8 @@
       it('should return empty array if zero is passed in as the index', function() {
         // There is a very important difference between `equal` and `eql`
         // Can you discover what it is?
-        expect(_.first([1, 2, 3], 0)).to.eql(FILL_ME_IN);
+        //expect(_.first([1, 2, 3], 0)).to.eql(FILL_ME_IN);
+        expect(_.first([1, 2, 3], 0)).to.eql([]);
       });
 
       it('should return all the array\'s elements if the index argument is larger than the length of the array', function() {
@@ -58,7 +60,8 @@
       });
 
       it('should accept an index argument', function() {
-        expect(_.last([1, 2, 3], 2)).to.eql(FILL_ME_IN);
+        //expect(_.last([1, 2, 3], 2)).to.eql(FILL_ME_IN);
+        expect(_.last([1, 2, 3], 2)).to.eql([]);
       });
 
       it('should return empty array if zero is passed in as the index', function() {
@@ -66,7 +69,8 @@
       });
 
       it('should return all the array\'s elements if the index argument is larger than the length of the array', function() {
-        expect(_.last([1, 2, 3], 5)).to.eql(FILL_ME_IN);
+        //expect(_.last([1, 2, 3], 5)).to.eql(FILL_ME_IN);
+        expect(_.last([1, 2, 3], 5)).to.eql([3]);
       });
     });
 
@@ -125,8 +129,8 @@
         _.each(letters, function(letter, index) {
           iterations.push([letter, index]);
         });
-
-        expect(iterations).to.eql(FILL_ME_IN);
+        //expect(iterations).to.eql(FILL_ME_IN);
+        expect(iterations).to.eql([[letters[0], 0], [ letters[1], 1 ], [ letters[2], 2 ]]);  
       });
 
       it('should iterate over arrays and provide access to the original collection', function() {
@@ -219,7 +223,8 @@
       it('should find 40 in the list', function() {
         var numbers = [10, 20, 30, 40, 50];
 
-        expect(_.indexOf(FILL_ME_IN, 40)).to.equal(3);
+        //expect(_.indexOf(FILL_ME_IN, 40)).to.equal(3);
+        expect(_.indexOf(numbers, 40)).to.equal(3);
       });
 
       it('should be able to compute indexOf even when the native function is undefined', function() {
@@ -229,14 +234,16 @@
       });
 
       it('returns -1 when the target cannot be found not in the list', function() {
-        var numbers = FILL_ME_IN;
+        //var numbers = FILL_ME_IN;
+        var numbers = [10, 20, 30];
 
         expect(_.indexOf(numbers, 35)).to.equal(-1);
       });
 
       it('returns the first index that the target can be found at when there are multiple matches', function() {
-        var numbers = FILL_ME_IN;
-        expect(FILL_ME_IN).to.equal(1);
+        //var numbers = FILL_ME_IN;
+        var numbers = [5, 10, 20, 30, 10];
+        expect(numbers.indexOf(10)).to.equal(1);
       });
     });
 
